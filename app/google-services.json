@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757647459357",
+    "project_id": "starwarsplanets-3b6b0",
+    "storage_bucket": "starwarsplanets-3b6b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757647459357:android:976852437e4422cd4cf2f4",
+        "android_client_info": {
+          "package_name": "com.example.starwarsplanets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757647459357-074ba0je12hnm6tm75fsmvfr3ibplir6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDS0GbyPcgJybF5E_iOcPbKyadBZw_jek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757647459357-074ba0je12hnm6tm75fsmvfr3ibplir6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
