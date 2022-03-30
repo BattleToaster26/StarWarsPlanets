@@ -2,14 +2,13 @@ package com.example.starwarsplanets.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.starwarsplanets.R
 import com.example.starwarsplanets.model.PlanetData
 import com.example.starwarsplanets.viewmodel.PlanetsAdapter
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +32,19 @@ class MainActivity : AppCompatActivity() {
     private fun getPlanetsData() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Planets")
         mDatabase.addValueEventListener(object:ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (planetSnapshot in snapshot.children) {
+                        val planet = planetSnapshot.getValue(PlanetData::class.java)
+                        planetList.add(planet!!)
+                    }
+                    recyclerPlanets.adapter = mAdapter
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@MainActivity, error.message, Toast.LENGTH_SHORT).show()
+            }
 
         })
     }
