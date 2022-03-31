@@ -33,7 +33,7 @@
 
 
         <ImageView
-            android:src="@drawable/alderaan"
+            android:imageUrl="@{isPlanets.planetImage}"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:elevation="30dp"
@@ -50,7 +50,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="Planet Name"
+                android:text="@{isPlanets.planetName}"
                 android:textColor="@color/white"
                 android:textSize="19sp"
                 android:textStyle="bold"
@@ -63,7 +63,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="Planet Type"
+                android:text="@{isPlanets.planetType}"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="15sp"
                 android:textStyle="bold"

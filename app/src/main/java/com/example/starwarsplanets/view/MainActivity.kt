@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(this@MainActivity, error.message, Toast.LENGTH_SHORT).show()
             }
-
         })
     }
 }
